@@ -11,7 +11,7 @@ const NavBar = () => {
     { id: 3, name: "About", path: "/about" },
   ];
   return (
-    <nav className="bg-purple-200 w-full">
+    <nav className="bg-purple-200 w-full  p-5 flex">
       <div onClick={() => setOpen(!open)} className="h-6 w-6 md:hidden">
         {open ? <XMarkIcon /> : <Bars3Icon />}
       </div>
@@ -24,6 +24,9 @@ const NavBar = () => {
           <Link key={route.id} route={route} />
         ))}
       </ul>
+      <div>
+        <input className="mr-30" type="text" placeholder="Search Bar" />
+      </div>
     </nav>
   );
 };
